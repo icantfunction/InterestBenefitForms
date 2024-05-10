@@ -1,3 +1,6 @@
+import React from 'react';
+
+const rawHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,25 +35,25 @@
                     <label class="block text-gray-700 text-base font-bold mb-2" for="email">
                         Email
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="email" type="email" placeholder="Email" required>
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="email" type="email" placeholder="Email">
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-base font-bold mb-2" for="phone">
                         Phone Number
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="phone" type="tel" placeholder="Phone Number" pattern="^\d{10}$" required title="Please enter a valid 10-digit phone number">
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="phone" type="tel" placeholder="Phone Number">
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-base font-bold mb-2" for="address">
                         Home Address
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="address" type="text" placeholder="Home Address" required>
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="address" type="text" placeholder="Home Address">
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-base font-bold mb-2" for="zipcode">
                         Zip Code
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="zipcode" type="text" placeholder="Zip Code" pattern="^\d{5}$" required title="Please enter a valid 5-digit zip code">
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="zipcode" type="text" placeholder="Zip Code">
                 </div>
             </form>
         </div>
@@ -66,3 +69,12 @@
     </div>
 </body>
 </html>
+`;
+
+const HtmlFormContainer = () => {
+    return (
+        <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
+    );
+};
+
+export default HtmlFormContainer;

@@ -1,5 +1,8 @@
+import React from 'react';
+
+const rawHTML = `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,13 +36,13 @@
                         <label class="block text-gray-700 text-base font-bold mb-2" for="age">
                             Your Date of Birth
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="age" type="date" pattern="(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19[5-9][7-9]|200[0-4])" title="Please enter your actual birthdate"  placeholder="Your Age" required>
+                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="age" type="date" pattern="(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19[5-9][7-9]|200[0-4])" title="Please enter your actual birthdate"  placeholder="Your Age">
                     </div>
                     <div class="flex-1">
                         <label class="block text-gray-700 text-base font-bold mb-2" for="zipcode">
                             Zip Code
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="zipcode" type="text" placeholder="Zip Code" pattern=".{5}" required>
+                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="zipcode" type="text" placeholder="Zip Code">
                     </div>
                     <div class="flex-1">
                         <label class="block text-gray-700 text-base font-bold mb-2" for="year">
@@ -55,13 +58,13 @@
                         <label class="block text-gray-700 text-base font-bold mb-2" for="fname">
                             First Name
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="fname" type="text" placeholder="First Name" pattern=".{2,20}" required>
+                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="fname" type="text" placeholder="First Name">
                     </div>
                     <div class="flex-1">
                         <label class="block text-gray-700 text-base font-bold mb-2" for="lname">
                             Last Name
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="lname" type="text" pattern=".{2,20}" placeholder="Last Name">
+                        <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="lname" type="text" placeholder="Last Name">
                     </div>
                 </div>
                 <div class="mb-6">
@@ -207,3 +210,12 @@
     </script>
 </body>
 </html>
+`;
+
+const HtmlFormContainer = () => {
+    return (
+        <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
+    );
+};
+
+export default HtmlFormContainer;

@@ -1,3 +1,6 @@
+import React from 'react';
+
+const rawHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,13 +35,7 @@
                     <label class="block text-gray-700 text-base font-bold mb-2" for="income">
                         Household Income
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="income" type="text" pattern=".{5,7}" placeholder="Household Income" required>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-base font-bold mb-2" for="county">
-                        County
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="county" type="text" pattern=".{4,15}" placeholder="Dade County" required>
+                    <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" id="income" type="text" placeholder="Household Income">
                 </div>
             </form>
         </div>
@@ -54,3 +51,12 @@
     </div>
 </body>
 </html>
+`;
+
+const HtmlFormContainer = () => {
+    return (
+        <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
+    );
+};
+
+export default HtmlFormContainer;
